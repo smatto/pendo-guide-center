@@ -1,0 +1,443 @@
+.nav-intercom ._pendo-launcher-whatsnew-count_ {
+     background-color: rgb(115, 182, 80) !important;
+  	right: 9px;
+    margin-top: 2px;
+ }
+
+p{
+	font-size: 14px
+}
+
+._pendo-guide-tt-region-block_ {
+    background-color: #333;
+    opacity: 0.7;
+}
+._pendo-badge_ {
+    width: 20px;
+    height: 20px;
+}
+
+.white-button {
+	background-color: #65b249;
+    border: none;
+    border-radius: 36px;
+    color: #fff;
+    cursor: pointer;
+    float: left;
+    font-family: inherit;
+    font-size: 14px;
+    height: 36px;
+    line-height: 140%;
+    margin: 10px 0 0 0;
+    padding: 8px 24px;
+    text-align: center;
+    text-decoration: none;    
+    vertical-align: middle;
+    white-space: nowrap;
+}
+
+
+/* ------------------------------
+ * -- Main Global Styling -------
+ * ------------------------------ */
+
+._pendo-guide_ {
+  /* -- Overarching settings for all guides -- */
+  font-family: "Source Sans Pro", sans-serif;
+  z-index: 10000010 !important;
+}
+
+._pendo-guide-container_ {
+  /* -- Guide border, shadow, background, etc. -- */
+	padding: 20px;
+    
+}
+
+._pendo-guide-container_ ._pendo-guide-content_ {
+  /* -- Content area -- use for font attributes, padding, etc. */
+}
+
+.guide-header-text {
+	font-weight: 400 !important;
+ 	font-size: 24px !important;
+}
+
+
+/* ------------------------------
+ * -- Lightbox Specific Styling -
+ * ------------------------------ */
+
+._pendo-guide-lb_ {
+  /* -- Overarching settings for Lightbox -- */
+  font-family: "Source Sans Pro", sans-serif
+}
+
+
+._pendo-guide-lb_ ._pendo-guide-container_ {
+  /* -- Guide border, shadow, background, etc. -- */
+  border-radius: 10px;
+  box-shadow: 0 0 8px rgba(0,0,0,.3);
+  padding: 20px;
+  width:600px;
+}
+
+._pendo-guide-lb_ ._pendo-guide-container_ ._pendo-guide-content_ {
+  /* -- Content area -- use for font attributes, padding, etc. */
+}
+
+._pendo-guide-lb_ ._pendo-guide-container_ ._pendo-guide-content_ h1 {
+   	color: #4c4c4c !important; 
+    font-size: 26px !important;
+  	font-weight: 400;
+  	margin-bottom: 6px;
+}
+
+._pendo-guide-lb_ ._pendo-guide-container_ ._pendo-guide-content_ p {
+     color: #4c4c4c;
+     font-size: 14px;
+  	
+}
+
+._pendo-guide-lb_ ._pendo-guide-container_ ._pendo-guide-content_ .link-button {
+	background-color: #65b249;
+    border: none;
+    border-radius: 40px;
+    color: #fff;
+    cursor: pointer;
+    height: 36px;
+    padding: 8px 24px;
+    text-align: center;
+    text-decoration: none;    
+    vertical-align: middle;
+    white-space: nowrap;
+}
+
+
+._pendo-backdrop_ {
+  /* The backdrop displayed behind lightboxes */
+  background-color: #000;
+  opacity: .4;
+}
+
+
+/* ------------------------------
+ * -- Tooltip Specific Styling --
+ * ------------------------------ */
+
+
+._pendo-guide-tt_ ._pendo-guide-container_ {
+  background-color: #1F84BC !important;
+  border-radius: 6px !important;
+  border: none;
+  box-shadow: 0 0 9px rgba(0,0,0,.6);
+   color: #fff !important;
+   font-size: 15px;
+   font-family: 'Source Sans Pro', sans-serif;
+    line-height: 30px;
+    max-width: 400px;
+    font-weight: 300;
+}
+  /* -- Guide border, shadow, background, etc. -- */
+}
+
+._pendo-guide-tt_ ._pendo-guide-container_ ._pendo-guide-content_ {
+	color: #fff
+  /* -- Content area -- use for font attributes, padding, etc.
+   */
+}
+
+/* -- Pointer on the edge of the tooltip -- */
+._pendo-guide-arrow_ {
+ 
+}
+
+._pendo-guide-arrow-top_ {
+  border-bottom-color: #1F84BC;
+top: 1px !important;
+}
+
+._pendo-guide-arrow-left_ {
+ border-right-color: #1F84BC;
+  left:0px !important;
+}
+
+._pendo-guide-arrow-right_ {
+  border-left-color: #1F84BC;
+	right:0px !important;
+}
+
+._pendo-guide-arrow-bottom_ {
+  border-top-color: #1F84BC;
+}
+
+._pendo-guide-arrow-border-top_ {
+
+}
+
+._pendo-guide-arrow-border-left_ {
+}
+
+._pendo-guide-arrow-border-right_ {
+}
+
+._pendo-guide-arrow-border-bottom_ {
+}
+
+
+._pendo-guide-tt_ .guide-header-text{
+	color: #FFF;
+  	font-size: 22px !important;
+	font-weight: 400 !important;
+}
+
+._pendo-guide-tt_ h1 {
+	color: #FFF;
+  	font-size: 20px !important;
+	font-weight: 400 !important;
+}
+
+._pendo-guide-tt_ p {
+	font-size: 15px;
+    font-weight: 400;
+    line-height: 19px;
+  	letter-spacing: .3px;
+ 	margin-bottom: 6px; 
+}
+
+._pendo-guide-tt_ a {
+	padding: 0px;
+	margin: 0px;
+}
+
+._pendo-guide-tt_ button{
+    height: 36px;
+    margin: 6px 0 0 0;
+    background-color: #FFF;
+    color: #4c4c4c;
+    font-weight: 400;
+    cursor: pointer;
+    border: none;
+    padding: 0px 40px;
+    border-radius: 40px;
+    font-family: inherit;
+    font-size: 14px;
+    line-height: 140%;
+    white-space: nowrap;
+    background-image: none;  
+    display: inline-block;
+    text-align: center;
+    vertical-align: middle;
+}
+
+._pendo-guide-tt_ button a{
+	color: #4c4c4c
+}
+
+._pendo-guide-tt_ button:hover {
+    background-color: #EAF3F8 ;
+}
+
+._pendo-guide-tt_ ._pendo-close-guide_ {
+	color: #454545 !important;
+  	font-size: 30px !important;
+    font-weight: 400;
+    padding: 0 10px !important;
+  	background-color: rgba(0,0,0,0) !important;
+    top: 0px !important;
+  	margin-top: 0px !important;
+  	margin-right: 0px !important;
+  	right: 5px !important;
+}
+
+._pendo-guide-tt_ ._pendo-close-guide_:hover{
+    color: #fff !important;
+	background-color: rgba(0,0,0,0);
+}
+
+/* ------------------------------
+ * -- Mobile Lightbox Styling ---
+ * ------------------------------ */
+
+._pendo-guide-mobile-lb_ {
+  /* Overarching settings for Mobile Lightbox */
+}
+
+._pendo-guide-mobile-lb_ ._pendo-guide-container_ {
+  /* -- Guide border, shadow, background, etc. -- */
+}
+
+._pendo-guide-mobile-lb_ ._pendo-guide-container_ ._pendo-guide-content_ {
+  /* -- Content area -- use for font attributes, padding, etc. */
+}
+
+/* ------------------------------
+ * -- Mobile Tooltip Styling ---
+ * ------------------------------ */
+ ._pendo-guide-mobile-tt_ {
+  /* Overarching settings for mobile tooltip */
+}
+
+._pendo-guide-mobile-tt_ ._pendo-guide-container_ {
+  /* -- Guide border, shadow, background, etc. -- */
+}
+
+._pendo-guide-mobile-tt_ ._pendo-guide-container_ ._pendo-guide-content_ {
+  /* -- Content area -- use for font attributes, padding, etc. */
+}
+
+
+/* ------------------------------
+ * -- Launcher Styling ----------
+ * ------------------------------ */
+
+._pendo-launcher_ {
+  /* Overarching settings for Launcher */
+  left: 208px !important;
+  top: auto !important;
+  bottom: -8px !important;
+}
+
+._pendo-launcher_ ._pendo-guide-container_ {
+  /* -- Launcher border, shadow, background, etc. -- */
+  /* -- (uses tooltip styles by default) -- */
+}
+
+._pendo-launcher_ ._pendo-launcher-content_ {
+  /* -- Content area -- use for font attributes, padding, etc. */
+}
+
+._pendo-launcher_ ._pendo-launcher-header_ {
+  /* -- Launcher header area -- */
+}
+
+._pendo-launcher_ ._pendo-launcher-header_ img {
+  /* -- Launcher header area image styles -- */
+}
+
+._pendo-launcher_ ._pendo-launcher-header_ ._pendo-launcher-title_ {
+  /* -- Launcher header area text styles -- */
+}
+
+._pendo-launcher_ ._pendo-launcher-header_ ._pendo-launcher-search-box_ {
+  /* -- Launcher search area (if enabled) -- */
+}
+
+._pendo-launcher_ ._pendo-launcher-header_ ._pendo-launcher-search-box_ input[type='text'] {
+  /* -- Launcher search area text box -- */
+}
+
+._pendo-launcher_ ._pendo-launcher-guide-listing_ {
+  /* -- Launcher guide listing area -- */
+}
+
+._pendo-launcher_ ._pendo-launcher-guide-listing_ ._pendo-launcher-item_ {
+  /* -- An individual item in the launcher guide listing -- */
+}
+
+._pendo-launcher_ ._pendo-launcher-footer_ {
+  /* -- Launcher footer area -- */
+}
+
+._pendo-launcher-badge_ {
+  /* -- Styles for the launcher badge -- */
+}
+
+/* -- Styles for launcher badge orientations -- */
+._pendo-launcher-badge-bottom-right_ {
+}
+
+._pendo-launcher-badge-bottom-left_ {
+}
+
+._pendo-launcher-badge-top-right_ {
+}
+
+._pendo-launcher-badge-top-left_ {
+}
+
+/* -- Styles for launcher orientations -- */
+._pendo-launcher-bottom-right_ {
+}
+
+._pendo-launcher-bottom-left_ {
+}
+
+._pendo-launcher-top-right_ {
+}
+
+._pendo-launcher-top-left_ {
+}
+
+/* ------------------------------
+ * -- Poll Styling --------------
+ * ------------------------------ */
+ 
+._pendo-guide-container_ ._pendo-poll_ {
+ /* -- Poll container -- */
+}
+
+._pendo-guide-container_ ._pendo-poll-question_ {
+ /* -- Question and answer container (everything but the submit button) -- */
+}
+
+._pendo-guide-container_ ._pendo-poll-question-prompt_ {
+ /* -- Question text -- */
+}
+
+._pendo-guide-container_ ._pendo-poll-question_ label {
+ /* -- Number Scale Poll positioning and styles for radio button text and inputs -- */
+}
+
+._pendo-guide-container_ ._pendo-poll-question_ select {
+ /* -- Dropdown styling -- */
+}
+
+._pendo-guide-container_ ._pendo-poll-question_ ._pendo-poll-npsrating-choices_ {
+ /* -- NPS Poll ratings container -- */
+}
+
+._pendo-guide-container_ ._pendo-poll-question_ ._pendo-poll-npsrating-choices_ label {
+ /* -- NPS Poll individual rating - the number scale items -- */
+}
+
+._pendo-guide-container_ ._pendo-poll-question_ ._pendo-poll-npsrating-choices_ label span {
+  /* -- NPS Poll individual rating - accompanying text for number scale items -- */
+}
+
+._pendo-guide-container_ ._pendo-poll-npsreason_ {
+ /* -- NPS Poll optional user-provided explanation container -- */
+}
+
+._pendo-guide-container_ ._pendo-poll-npsreason_ ._pendo-poll-question-prompt_ {
+ /* -- NPS Poll optional user-provided explanation text -- */
+}
+
+._pendo-guide-container_ ._pendo-poll-question_ button {
+  /* -- Yes/No Poll buttons styles -- */
+}
+
+._pendo-guide-container_ ._pendo-poll-submit_ {
+ /* -- Submit button styles -- */
+}
+
+._pendo-guide-container_ ._pendo-poll-message_ {
+ /* -- "Success message" styles -- */
+}
+
+
+/* ------------------------------
+ * -- Additional Global Styling -
+ * ------------------------------ */
+
+._pendo-close-guide_ {
+  /* -- The dismiss guide button displayed in the corner of every guide -- */
+}
+
+._pendo-badge_ {
+  /* -- Styles for badges -- */
+}
+
+
+/* ------------------------------
+ * -- Your Custom Classes/IDs ---
+ * ------------------------------ */

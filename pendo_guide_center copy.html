@@ -1,0 +1,165 @@
+<div class="_pendo-launcher-content_"  style="border-color:<%= data.color %>">
+    <div class="_pendo-launcher-header_">
+        <div class="_pendo-launcher-title_" style="color:<%= data.color %>"><%= data.title %></div>
+        <% if (data.enableSearch) { %>
+        <div class="_pendo-launcher-search-box_">
+            <label for="_pendo-launcher-search-input_" class="_pendo-launcher-search-icon_"></label>
+            <input id="_pendo-launcher-search-input_" type="text" placeholder="Search..." />
+            <a class="_pendo-launcher-clear-search_"></a>
+        </div>
+        <% } %>
+    </div>
+
+    <% if (data.enableSearch) { %>
+    <div class="_pendo-launcher-search-results_">
+        <div class="_pendo-launcher-search-result-list_">
+            <div class="_pendo-launcher-search-header_">
+                SEARCH RESULTS
+                <a href="javascript:void(0);" class="_pendo-launcher-clear-search_">Clear</a>
+            </div>
+            <% if (!guides.length) { %>
+            <div class="_pendo-launcher-search-results-container_ _pendo-launcher-search-empty_">
+                <h4>No matches found for '<%= data.search.text %>'</h4>
+                <p>Try searching a different keyword or check the spelling of your current entry.</p>
+            </div>
+            <% } %>
+            <% if (pendo._.chain(guides).invoke('isHelpGuide').filter().value().length) { %>
+            <div class="_pendo-launcher-search-results-container_">
+                <h4><%= data.knowledgebase.title %></h4>
+                <ul>
+                <% pendo._.each(guides, function(guide) { %>
+                    <% if (guide.isHelpGuide()) { %>
+                    <li class="_pendo-launcher-item_" id="launcher-<%= guide.id %>">
+                        <a href="javascript:void(0);"><%= data.search.highlight(guide.name) %></a>
+                    </li>
+                    <% } %>
+                <% }) %>
+                </ul>
+            </div>
+            <% } %>
+            <% if (pendo._.chain(guides).invoke('isWhatsNew').filter().value().length) { %>
+            <div class="_pendo-launcher-search-results-container_">
+                <h4><%= data.whatsnew.title %></h4>
+                <ul>
+                <% pendo._.each(guides, function(guide) { %>
+                    <% if (guide.isWhatsNew()) { %>
+                    <li class="_pendo-launcher-item_ _pendo-launcher-whatsnew-item_" id="<%= guide.id %>">
+                        <a href="javascript:void(0);"><%= data.search.highlight(guide.name) %></a>
+                    </li>
+                    <% } %>
+                <% }) %>
+                </ul>
+            </div>
+            <% } %>
+            <% if (typeof onboarding !== 'undefined' && pendo._.chain(guides).invoke('isOnboarding').filter().value().length) { %>
+            <div class="_pendo-launcher-search-results-container_">
+                <h4>Help Center</h4>
+                <ul>
+                <% pendo._.each(guides, function(guide) { %>
+                    <% if (guide.isOnboarding()) { %>
+                    <li class="_pendo-launcher-item_" id="launcher-<%= guide.id %>">
+                        <a href="javascript:void(0);"><%= data.search.highlight(guide.name) %></a>
+                    </li>
+                    <% } %>
+                <% }) %>
+                </ul>
+            </div>
+            <% } %>
+        </div>
+        <div class="_pendo-launcher-search-display_">
+            <div class="_pendo-launcher-search-header_">
+                <a href="javascript:void(0);" class="_pendo-launcher-search-return_">
+                    <span class="_pendo-launcher-search-chevron_"></span> Back to Search Results
+                </a>
+                <h4></h4>
+            </div>
+        </div>
+    </div>
+    <% } %>
+
+    <div class="_pendo-launcher-body_">
+        <% if (data.knowledgebase && data.knowledgebase.enabled) { %>
+        <div class="_pendo-launcher-accordion_ _pendo-launcher-help_">
+            <button>
+                <%= data.knowledgebase.title %>
+            </button>
+            <div class="_pendo-launcher-guide-listing_">
+                <% pendo._.each(guides, function(guide) { %>
+                    <!--
+                    The template for individual launcher items. Each item must have the class
+                    "_pendo-launcher-item_" and an id of "launcher-<%= guide.id %>"
+                    -->
+                    <% if (guide.isHelpGuide()) { %>
+                    <div class="_pendo-launcher-item_" id="launcher-<%= guide.id %>">
+                        <a href="javascript:void(0);"><%= guide.name %></a>
+                    </div>
+                    <% } %>
+                <% }) %>
+            </div>
+        </div>
+        <% } %>
+
+        <% if (data.whatsnew && data.whatsnew.enabled) { %>
+        <div class="_pendo-launcher-accordion_ _pendo-launcher-whatsnew_">
+            <button>
+                <%= data.whatsnew.title %>
+                <span class=" _pendo-launcher-whatsnew-count_"></span>
+            </button>
+            <div class="_pendo-launcher-guide-listing_">
+                <% pendo._.each(data.whatsnew.guides, function(guide) { %>
+                    <!--
+                    The template for individual launcher items. Each item must have the class
+                    "_pendo-launcher-item_" and an id of "launcher-<%= guide.id %>"
+                    -->
+                    <div class="_pendo-launcher-item_" id="launcher-<%= guide.id %>"></div>
+                <% }) %>
+                <!-- What to display when there are no "what's new" guides -->
+                <div class="_pendo-launcher-item_ empty">
+                    <div class="_pendo-guide-whatsnew_">There are no new announcements</div>
+                </div>
+            </div>
+        </div>
+        <% } %>
+
+        <% if (typeof onboarding !== 'undefined') { %>
+        <div class="_pendo-launcher-accordion_ _pendo-launcher-onboarding_">
+            <button>
+                Help Center
+            </button>
+            <div class="_pendo-launcher-guide-listing_">
+                <% pendo._.each(guides, function(guide) { %>
+                    <!--
+                    The template for individual onboarding items. Each item must have the class
+                    "_pendo-launcher-item_" and an id of "launcher-<%= guide.id %>"
+                    -->
+                    <% if (guide.isOnboarding()) { %>
+                    <div class="_pendo-launcher-item_ _pendo-onboarding-item_ _pendo-onboarding-item-status-<%= guideStatus(guide) %>_" id="launcher-<%= guide.id %>">
+                        <a href="javascript:void(0);"><%= guide.name %></a>
+                        <% if (guide.isMultiStep && guideStatus(guide) == 'in-progress') { %>
+                            <div class="_pendo-onboarding-item-progress_">
+                                 Task in Progress (Step <%= guide.getPositionOfStep(guide.activeStep()) %> of <%= guide.getTotalSteps() %>)
+                            </div>
+                        <% } %>
+                    </div>
+                    <% } %>
+                <% }) %>
+            </div>
+        </div>
+        <% } %>
+
+        <div class="_pendo-launcher-accordion_">
+            <button>
+                Ask us a Question
+            </button>
+            <div class="_pendo-launcher-guide-listing_">
+                <script type="text/javascript" src="http://assets.freshdesk.com/widget/freshwidget.js"></script>
+                <style type="text/css" media="screen, projection">
+                @import url(http://assets.freshdesk.com/widget/freshwidget.css); 
+                </style> 
+                <iframe title="Feedback Form" class="freshwidget-embedded-form" id="freshwidget-embedded-form" src="https://lanetix.freshdesk.com/widgets/feedback_widget/new?&widgetType=embedded&screenshot=no" scrolling="no" height="500px" width="100%" frameborder="0" >
+                </iframe>
+            </div>
+        </div>
+
+    </div>
+</div>
